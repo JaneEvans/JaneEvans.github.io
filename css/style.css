@@ -32,6 +32,7 @@ Header
     border-bottom: solid rgba(62, 69, 73, 0.349);
     min-height: 56px;
     transition: min-height 0.3s;
+    margin-top: 1em;
 }
 
 .header__inner {
@@ -61,7 +62,7 @@ Header
     font-family: 'Black Ops One', cursive;
     font-weight: 300;
     font-size: 3em;
-    margin: 36px 48px 12px 36px;
+    margin: 36px 12px 12px 36px;
     /* margin-right: 1em; */
     display: inline-block;
     color: #2d3c46;   
@@ -97,3 +98,12 @@ Header
     font-weight: normal;
     margin-left: 2%;
 }
+
+
+@media screen and (min-width: 1000px) {
+    main, .header, .header__inner, .copyright {
+      width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

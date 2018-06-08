@@ -17,7 +17,10 @@ header, nav, footer, section, article, div {
     box-sizing: border-box;
 }
 
-
+.header__inner, .content {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 
@@ -39,8 +42,6 @@ Header
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .header__logo__div {
@@ -51,7 +52,19 @@ Header
     height: 80px;   
     vertical-align: top;
     margin: 36px 12px 12px 12px;
+
+	-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+     /*-- Animate the article --*/
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
+
+.header__logo:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0); 
+}
+
 
 .header__title__div {
     width: 80%;
@@ -63,7 +76,6 @@ Header
     font-weight: 300;
     font-size: 3em;
     margin: 36px 12px 12px 36px;
-    /* margin-right: 1em; */
     display: inline-block;
     color: #2d3c46;   
 }
@@ -76,6 +88,61 @@ Header
 }
 
 
+/* 
+Basecamp 
+*/
+
+.basecamp {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: url("../pic/Basecamp.jpg");
+    background-size: cover;
+    min-height: 500px;
+    margin: 1.5em 1em 1.5em 1em;
+    /*-- Animate the article --*/
+    -webkit-transition: 3s ease-in-out;
+    transition: 3s ease-in-out;
+}
+
+.basecamp:hover {
+    background-position: bottom;
+}
+
+
+.basecamp article {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 130px;
+    bottom: 0;
+    width: 100%;
+    color: rgba(233, 224, 224, 0.5);
+    padding: 1em;
+    /*-- Animate the article --*/
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.basecamp article:hover {
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.basecamp p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+/* 
+Featured Projects
+*/
+
+.featured-work h1 {
+    font-family: 'Sunflower', sans-serif;
+    color: #2d3c46;
+}
 
 
 
@@ -100,8 +167,16 @@ Header
 }
 
 
+
+
+
+
+/* 
+responsive 
+*/
+
 @media screen and (min-width: 1000px) {
-    main, .header, .header__inner, .copyright {
+    main, .header__inner {
       width: 1000px;
       margin-left: auto;
       margin-right: auto;

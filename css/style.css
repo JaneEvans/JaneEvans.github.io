@@ -1,13 +1,21 @@
-body, html {
-    margin: 0;
+html, body {
     padding: 0;
+    /* margin:0; */
     widows: 100%;
     height: 100%;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
+    /* margin: 0, 1em, 0, 1em; */
+    margin-left: auto;
+    margin-right: auto;
 }
+
+main {
+    margin-bottom: 2em;
+}
+
 
 h1, h2, h3, h4, h5 {
     margin: 0; 
@@ -17,7 +25,7 @@ header, nav, footer, section, article, div {
     box-sizing: border-box;
 }
 
-.header__inner, .content {
+.header__inner, .content, .project-board {
     display: flex;
     flex-wrap: wrap;
 }
@@ -30,12 +38,12 @@ header, nav, footer, section, article, div {
 /* 
 Header 
 */
+
 .header {
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26); */
     border-bottom: solid rgba(62, 69, 73, 0.349);
-    min-height: 56px;
+    min-height: 40px;
     transition: min-height 0.3s;
-    margin-top: 1em;
 }
 
 .header__inner {
@@ -51,7 +59,7 @@ Header
 .header__logo {
     height: 80px;   
     vertical-align: top;
-    margin: 36px 12px 12px 12px;
+    margin: 12px 12px 12px 12px;
 
 	-webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -75,7 +83,7 @@ Header
     font-family: 'Black Ops One', cursive;
     font-weight: 300;
     font-size: 3em;
-    margin: 36px 12px 12px 36px;
+    margin: 12px 12px 12px 36px;
     display: inline-block;
     color: #2d3c46;   
 }
@@ -98,35 +106,33 @@ Basecamp
     position: relative;
     background-image: url("../pic/Basecamp.jpg");
     background-size: cover;
-    min-height: 500px;
-    margin: 1.5em 1em 1.5em 1em;
+    min-height: 480px;
+    margin: 1.5em 0em 1.5em 0em;
     /*-- Animate the article --*/
     -webkit-transition: 3s ease-in-out;
     transition: 3s ease-in-out;
+}
+
+.basecamp article {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 200px;
+    bottom: 0;
+    width: 100%;
+    color: rgba(233, 224, 224, 0.5);
+    padding: 2em 1em 1em 1em;
+    /*-- Animate the article --*/
+    -webkit-transition: .3s ease-in-out;
+	transition: .5s ease-in-out;
 }
 
 .basecamp:hover {
     background-position: bottom;
 }
 
-
-.basecamp article {
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    height: 130px;
-    bottom: 0;
-    width: 100%;
-    color: rgba(233, 224, 224, 0.5);
-    padding: 1em;
-    /*-- Animate the article --*/
-    -webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-
-.basecamp article:hover {
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.5);
+.basecamp:hover article {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .basecamp p {
@@ -139,9 +145,86 @@ Basecamp
 Featured Projects
 */
 
+.featured-work {
+    margin: 1em 0em 5em 0em;
+}
+
+
 .featured-work h1 {
     font-family: 'Sunflower', sans-serif;
-    color: #2d3c46;
+    font-size:40px;
+    font-weight: 400;
+    color: rgba(62, 69, 73, 0.6);
+    margin: 0em 0em 0.2em 0.2em;  
+}
+
+.project-board {
+    width: 100%;
+    height: auto;
+}
+
+.project-board a {
+    /* text-decoration: none; */
+    color: #fff;
+}
+
+.project {
+    width: 30%;
+    height: auto;
+    position: relative;
+    min-height: 220px;
+    margin: 1.5em 0.5em 1.5em 0.5em;
+}
+
+.project article {
+    box-sizing: border-box;
+    background-color: rgba(81, 89, 95, 0.5);
+    position: absolute;
+    height: 80px;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    padding: 0.5em;
+    /* Move the article off canvas. */
+    opacity: 0;
+    /*-- Animate the article --*/
+    -webkit-transition: .3s ease-in-out;
+	transition: .5s ease-in-out;
+}
+
+
+.pixel-art {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: grey;
+    background-image: url("../pic/pixel-art.jpg");
+    border: 1px solid rgba(81, 89, 95, 0.3);
+}
+
+.seattle-tech-event{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: grey;
+    background-image: url("../pic/seattle-tech-event-finder-full.jpg");
+    border: 1px solid rgba(81, 89, 95, 0.3);
+}
+
+
+.about-me{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: grey;
+    background-image: url("../pic/about-me_small.jpg");
+}
+
+.project:hover article {
+    opacity: 1;
 }
 
 
@@ -160,10 +243,12 @@ Featured Projects
 
 
 .copyright {
+    width: 100%;
+    min-height: 30px;
     color: #919699;
     font-size: small;
     font-weight: normal;
-    margin-left: 2%;
+    position:center;
 }
 
 

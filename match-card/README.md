@@ -1,5 +1,5 @@
 # Memory Game Project
-A flip flop match card game for all ages!
+A flip match card game for all ages!
 
 ## Instructions
 1. Click to start game; it will allow you 3 seconds to remember the cards

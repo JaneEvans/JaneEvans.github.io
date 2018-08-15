@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton|Mina">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Pixel Art Maker</h1>
+    <h4>Created by Jinjin Ge, March 2018</h4>
+
+    <h2>Choose Grid Size to Create Your Pixel Canvas</h2>
+    <form id="sizePicker">
+        Grid Height:
+        <input type="number" id="inputHeight" name="height" min="1" value="1">
+        Grid Width:
+        <input type="number" id="inputWidth" name="width" min="1" value="1">        
+        <input type="submit">
+    </form>
+
+    <h2>Pick A Color</h2>
+    <input type="color" id="colorPicker">
+
+    <h2>Design Canvas</h2>
+    <h4>Click a cell to assign the selected color; click the cell again to erase the color.</h4>
+    <table id="pixelCanvas"></table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/designs.js"></script>
+</body>
+</html>

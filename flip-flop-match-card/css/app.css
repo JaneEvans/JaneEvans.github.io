@@ -1,0 +1,208 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Architects Daughter', cursive;
+    font-size: 110%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    margin-top: 2em;
+}
+
+h1 {
+    font-family: 'Rock Salt', cursive;
+    font-size: 170%;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 580px;
+    min-height: 580px;
+    background: linear-gradient(160deg, #76cbe0 0%, #ebe7b9 100%);
+    padding: 15px;
+    border-radius: 10px;
+    /* box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 4em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #40607a;
+    font-size: 33px;
+    color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 1px 10px 0 rgba(46, 61, 73, 0.5);
+    opacity: 1;
+    animation: rotated 1s;
+}
+
+@keyframes rotated {
+    0% {
+        transform: rotateY(360deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+.deck .card:hover {
+    opacity: .5;
+}
+
+.deck .card.open {
+    /* -webkit-transform:rotateY(0);
+    transform: rotateY(0); */
+
+    background: #02b3e4;
+    cursor: default;
+    opacity: 1;
+}
+
+.deck .card.show {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #cc8502;
+    color: #ffffff;
+    opacity: 1;
+}
+
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 550px;
+    margin-bottom: 15px;
+}
+
+.score-panel .stars {
+    padding: 0;
+    display: inline-block;
+    margin: 0 20px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+}
+
+.score-panel .fa-repeat {
+    margin-left: 8px;
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
+
+.score-panel .fa-repeat:hover {
+    -webkit-transform: rotate(45deg) scale(1.4);
+    transform: rotate(45deg) scale(1.4);
+}
+
+#timer{
+    margin-left: 1em;
+}
+
+
+/*
+defines the layer which will cover the site once the floating window is showed.
+*/
+#darkOverlay{
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+    cursor: auto;
+    display: none;
+    height: 100%;
+    /* left: 0; */
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100; /*over everything */
+}
+
+#gameOver{
+    font-size: 35px;
+}
+
+
+/*
+Defining the floating window
+*/
+#floatWindow{
+    text-align: center;
+    float: middle;
+    background: transparent;
+    margin: 200px auto ;
+    width: 450px;
+    z-index: 103; 
+    position:relative;
+    /* padding:30px 30px 30px 30px; */
+}
+
+
+/*
+Adding the button for closing the floating window
+*/
+.close-button{
+    position: static;
+    cursor: pointer;
+    z-index: 1100;
+    margin: 30px auto;
+    background-color: #02ccba;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+

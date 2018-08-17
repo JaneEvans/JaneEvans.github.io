@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Flip Match Cards</title>
     <meta name="description" content="">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -11,92 +12,94 @@
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Rock+Salt|Architects+Daughter" >
     <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
 
+<body>
     <div class="container">
         <header>
             <h1>Matching Game</h1>
         </header>
 
-        <section class="score-panel">
-            <ul class="stars">
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
+        <main class='container'>
+            <section class="score-panel">
+                <ul class="stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
+    
+                <span class="moves">0</span> Move(s)
+    
+                <span id="timer">00:00:00</span>
+    
+                <div class="restart">
+                    Click to Start <i class="fa fa-repeat"></i>
+                </div>
+            </section>
+    
+            <ul class="deck">
+                <li class="card" id="c1">
+                    <i class="fa fa-diamond"></i>
+                </li>
+                <li class="card" id="c2">
+                    <i class="fa fa-paper-plane-o"></i>
+                </li>
+                <li class="card" id="c3">
+                    <i class="fa fa-anchor"></i>
+                </li>
+                <li class="card" id="c4">
+                    <i class="fa fa-bolt"></i>
+                </li>
+                <li class="card" id="c5">
+                    <i class="fa fa-cube"></i>
+                </li>
+                <li class="card" id="c6">
+                    <i class="fa fa-anchor"></i>
+                </li>
+                <li class="card" id="c7">
+                    <i class="fa fa-leaf"></i>
+                </li>
+                <li class="card" id="c8">
+                    <i class="fa fa-bicycle"></i>
+                </li>
+                <li class="card" id="c9">
+                    <i class="fa fa-diamond"></i>
+                </li>
+                <li class="card" id="c10">
+                    <i class="fa fa-bomb"></i>
+                </li>
+                <li class="card" id="c11">
+                    <i class="fa fa-leaf"></i>
+                </li>
+                <li class="card" id="c12">
+                    <i class="fa fa-bomb"></i>
+                </li>
+                <li class="card" id="c13">
+                    <i class="fa fa-bolt"></i>
+                </li>
+                <li class="card" id="c14">
+                    <i class="fa fa-bicycle"></i>
+                </li>
+                <li class="card" id="c15">
+                    <i class="fa fa-paper-plane-o"></i>
+                </li>
+                <li class="card" id="c16">
+                    <i class="fa fa-cube"></i>
+                </li>
             </ul>
-
-            <span class="moves">0</span> Move(s)
-
-            <span id="timer">00:00:00</span>
-
-            <div class="restart">
-                Click to Start <i class="fa fa-repeat"></i>
+    
+            <div id="darkOverlay">
+                <div id="floatWindow">
+                    <p id = 'gameOver'>Game Over</p>
+                    <p id = 'gameResult1'></p>
+                    <p id = 'gameResult2'></p>
+                    <button class="close-button"> Play Again </button>
+                </div>
             </div>
-        </section>
-
-        <ul class="deck">
-            <li class="card" id="c1">
-                <i class="fa fa-diamond"></i>
-            </li>
-            <li class="card" id="c2">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card" id="c3">
-                <i class="fa fa-anchor"></i>
-            </li>
-            <li class="card" id="c4">
-                <i class="fa fa-bolt"></i>
-            </li>
-            <li class="card" id="c5">
-                <i class="fa fa-cube"></i>
-            </li>
-            <li class="card" id="c6">
-                <i class="fa fa-anchor"></i>
-            </li>
-            <li class="card" id="c7">
-                <i class="fa fa-leaf"></i>
-            </li>
-            <li class="card" id="c8">
-                <i class="fa fa-bicycle"></i>
-            </li>
-            <li class="card" id="c9">
-                <i class="fa fa-diamond"></i>
-            </li>
-            <li class="card" id="c10">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card" id="c11">
-                <i class="fa fa-leaf"></i>
-            </li>
-            <li class="card" id="c12">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card" id="c13">
-                <i class="fa fa-bolt"></i>
-            </li>
-            <li class="card" id="c14">
-                <i class="fa fa-bicycle"></i>
-            </li>
-            <li class="card" id="c15">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card" id="c16">
-                <i class="fa fa-cube"></i>
-            </li>
-        </ul>
-
-        <div id="darkOverlay">
-            <div id="floatWindow">
-                <p id = 'gameOver'>Game Over</p>
-                <p id = 'gameResult1'></p>
-                <p id = 'gameResult2'></p>
-                <button class="close-button"> Play Again </button>
-            </div>
-        </div>
-
+        </main>
     </div>
+
     <script src="js/easyTimer/easytimer.min.js"></script>
     <script src="js/app.js"></script>
 </body>

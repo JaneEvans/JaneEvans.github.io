@@ -1,0 +1,76 @@
+body {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*
+defines the layer which will cover the site once the floating window is showed.
+*/
+#darkOverlay{
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+    cursor: auto;
+    display: none;
+    height: 100%;
+    /* left: 0; */
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100; /*over everything */
+}
+
+/*
+Defining the floating window
+*/
+#floatWindow{
+    text-align: center;
+    float: middle;
+    background: transparent;
+    margin: 250px auto ;
+    width: 450px;
+    z-index: 103; 
+    position:relative;
+    /* padding:30px 30px 30px 30px; */
+}
+
+p{
+    margin: 0;
+}
+
+#gameIntro{
+    font-size: 20px;
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-top: 1em;
+}
+
+#gameOver{
+    font-size: 35px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+/*
+Adding the button for closing the floating window
+*/
+.close-button{
+    position: static;
+    cursor: pointer;
+    z-index: 1100;
+    margin: 30px auto;
+    background-color: #0896e7dc;
+    border: none;
+    color: white;
+    padding: 5px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Gloria Hallelujah', cursive;
+    border-radius: 8px;
+}

@@ -33,7 +33,7 @@ self.addEventListener('install', function(e){
 self.addEventListener('fetch', function(e){
     e.respondWith(
         // Check if the event request url already exists in the cache
-        caches.match(e.request).then(function(response){
+        caches.match(e.request, {ignoreSearch: true}).then(function(response){
             if (response) {
                 console.log('Found', e.request, ' in cache');
                 return response;

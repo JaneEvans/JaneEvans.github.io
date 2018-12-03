@@ -40,7 +40,15 @@ self.addEventListener('fetch', function(e){
             }
             else {
                 console.log('Cannot find', e.request, 'in cache, Fetching...');
-                return fetch(e.request);
+                return fetch(e.request).then(function(response){
+                    const clonedResponse = response.clone();
+                    caches.open('vw1').then(function(cache){
+                        cache.put(e.request, clonedResponse);
+                    })
+                    return response;
+                }).catch(function(err){
+                    console.log(err);
+                });
             }
         })
     );

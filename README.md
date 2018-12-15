@@ -4,7 +4,7 @@ Host my web projects
 
 ## Projects
 * [My Basecamp](https://janeevans.github.io/my-portfolio-website/)
-    My personal portfolio website.
+    - My personal portfolio website.
 * [Restaurant Review](https://janeevans.github.io/restaurant-review/)
     A restaurant review website.
 * [Arcade Game](https://janeevans.github.io/arcade-game/)

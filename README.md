@@ -6,8 +6,8 @@ Host my web projects
 * [My Basecamp](https://janeevans.github.io/my-portfolio-website/)
     - My personal portfolio website.
 
-* [My Reading List](https://janeevans.github.io/myReads)
-    - A bookshelf web app that allows you to select and categorize books that you have read, are currently, or want to read, as well as add more books into the bookshelf.
+<!-- * [My Reading List](https://janeevans.github.io/myReads)
+    - A bookshelf web app that allows you to select and categorize books that you have read, are currently, or want to read, as well as add more books into the bookshelf. -->
 
 * [Restaurant Review](https://janeevans.github.io/restaurant-review/)
     - A restaurant review website.

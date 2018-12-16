@@ -8,7 +8,7 @@ This project is built by React. The client library can be accessed by an API ser
 ## How to get started developing locally:
 
 * install all project dependencies with `npm install`
-* install additional project dependencies with `npm install -- save react-dom react-router-dom` 
+<!-- * install additional project dependencies with `npm install -- save react-dom react-router-dom`  -->
 * start the development server with `npm start`
 
 ## Author

@@ -20,14 +20,14 @@
         "className":"fa fa-facebook"
       },
       {
+        "name":"instagram",
+        "url":"https://www.instagram.com/summithunter2017",
+        "className":"fa fa-instagram"
+      },
+      {
         "name":"twitter",
         "url":"./",
         "className":"fa fa-twitter"
-      },
-      {
-        "name":"instagram",
-        "url":"./",
-        "className":"fa fa-instagram"
       },
       {
         "name":"github",

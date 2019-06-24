@@ -4,7 +4,10 @@ Host my web projects
 
 ## Projects
 * [My Basecamp](https://janeevans.github.io/my-portfolio-website/)
-    - My personal portfolio website.
+    - My personal portfolio website (beta).
+    
+* [Summit Hunter](https://janeevans.github.io/SummitHunter/)
+    - A fully responsive website for my friend's Nonprofit Organization which is built around passion for the outdoors.
 
 * [Seattle Coffee Radar](https://janeevans.github.io/seattle-coffee-radar/)
     - A fully responsive single-page web application using ReactJS featuring a map of Seattle best coffee shops

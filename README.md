@@ -3,8 +3,8 @@
 Host my web projects
 
 ## Projects
-* [My Basecamp](https://janeevans.github.io/my-portfolio-website/)
-    - My personal portfolio website (beta).
+* [My Applied Statistics Study Notes](https://janeevans.github.io/Applied%20Statistics%20Study%20Notes/page1239118772.html)
+    - A place to save statistics studying materials and track study progress.
     
 * [Summit Hunter](https://janeevans.github.io/SummitHunter/)
     - A fully responsive website for my friend's Nonprofit Organization which is built around passion for the outdoors.
@@ -25,7 +25,10 @@ Host my web projects
     - A flip match card game for all ages!
 
 * [Pixel Art Maker](https://janeevans.github.io/pixel-art-maker/)
+    - A fun tool to make pixel are.
 
+* [My Basecamp](https://janeevans.github.io/my-portfolio-website/)
+    - My personal portfolio website (beta).
 
 <!-- * [Feed Reader Testing](https://janeevans.github.io/feed-reader-testing/) -->
 * To be continued...

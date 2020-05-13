@@ -3,7 +3,7 @@
 Host my web projects
 
 ## Projects
-* [My Applied Statistics Study Notes](https://janeevans.github.io/Applied%20Statistics%20Study%20Notes/page1239118772.html)
+* [My Applied Statistics Study Notes](https://janeevans.github.io/Applied_Statistics_Study_Notes/)
     - A place to save statistics studying materials and track study progress.
     
 * [Summit Hunter](https://janeevans.github.io/SummitHunter/)
